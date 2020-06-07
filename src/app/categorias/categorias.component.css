@@ -1,6 +1,9 @@
 .card-text{
     display: flex;
     justify-content: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: larger;
+    font-weight: 100;
 }
 
 .card-img-top{
@@ -18,7 +21,10 @@
 
 .sub-title{
     text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
+
+
 
 .row{
     display: flex;
