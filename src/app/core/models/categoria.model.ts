@@ -1,4 +1,5 @@
 export default class Categoria{
+    id: number
     nombre: string
-    url: string
+    image: string
 }

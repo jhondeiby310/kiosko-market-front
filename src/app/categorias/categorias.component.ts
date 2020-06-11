@@ -15,7 +15,10 @@ export class CategoriasComponent implements OnInit {
   constructor(private apiService: ApiService) { }
 
   ngOnInit() {
-    this.categorias = this.apiService.obtenerCategorias();
+    this.apiService.obtenerCategorias().subscribe(
+      (res: any) => this.categorias = res,
+      err => console.log(err)
+    )
   }
 
 }

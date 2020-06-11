@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { RouterModule, Routes } from '@angular/router';
 import { CategoriasComponent } from './categorias/categorias.component';
 import { ApiService } from './core/services/api.service';
+import { HttpClientModule } from '@angular/common/http';
 
 const ROUTES: Routes = [
   {
@@ -33,7 +34,8 @@ const ROUTES: Routes = [
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(ROUTES)
+    RouterModule.forRoot(ROUTES),
+    HttpClientModule
   ],
   providers: [ApiService],
   bootstrap: [AppComponent]
