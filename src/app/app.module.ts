@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
+import { ProductoComponent } from './productos/productos.component'
 import { RouterModule, Routes } from '@angular/router';
 import { CategoriasComponent } from './categorias/categorias.component';
 import { ApiService } from './core/services/api.service';
@@ -21,6 +22,10 @@ const ROUTES: Routes = [
   {
     path: 'categorias',
     component: CategoriasComponent
+  },
+  {
+    path: 'categoria/accesorios',
+    component: ProductoComponent
   }
 ];
 
@@ -30,7 +35,8 @@ const ROUTES: Routes = [
     AppComponent,
     NavBarComponent,
     HomeComponent,
-    CategoriasComponent
+    CategoriasComponent, 
+    ProductoComponent
   ],
   imports: [
     BrowserModule,
