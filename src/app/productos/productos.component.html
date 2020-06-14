@@ -1,6 +1,13 @@
-<section>
-    <h1>Productos que te pueden interesar</h1>
-    <p>En este sitio puede ver sus productos</p>
-</section>
+<h1 class="sub-title">Productos</h1>
 
 
+<div class="row">
+    <div *ngFor="let producto of productos" class="card" style="width: 20rem;">
+        <img src="{{producto.url}} " class="card-img" alt="...">
+        <div class="card-img-overlay">
+            <h5 class="card-title">{{producto.nombreProducto}} </h5>
+            <p class="card-text">{{producto.descripcion}}</p>
+            <p class="card-text2">{{producto.precio}}</p>
+        </div>
+    </div>
+</div>

@@ -3,6 +3,7 @@ import Categoria from '../models/categoria.model';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 
+
 @Injectable({
     providedIn: 'root',
 })
@@ -19,3 +20,6 @@ export class ApiService {
         return this.httpClient.get(`${this.HOST}${this.endPointCategorias}`, {observe: 'body'});
     }
 }
+
+
+

@@ -22,7 +22,8 @@
 .sub-title{
     text-align: center;
     font-family: Georgia, 'Times New Roman', Times, serif;
-}
+    color: aliceblue;
+  }
 
 
 
@@ -33,6 +34,7 @@
     overflow: hidden;
     margin: 10px;
     border-radius: 2px;
+    color: aliceblue;
 }
 
 .card{
@@ -43,7 +45,8 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-    border-color:white;
+    border-color:rgb(40, 45, 49);
+    background-color: rgb(40, 45, 49);
 }
 
   .card .card-img-top {

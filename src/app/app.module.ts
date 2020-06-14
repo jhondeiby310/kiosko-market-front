@@ -8,7 +8,9 @@ import { ProductoComponent } from './productos/productos.component'
 import { RouterModule, Routes } from '@angular/router';
 import { CategoriasComponent } from './categorias/categorias.component';
 import { ApiService } from './core/services/api.service';
+import { ApiServiceP } from './core/services/api.serviceproducts';
 import { HttpClientModule } from '@angular/common/http';
+import { from } from 'rxjs';
 
 const ROUTES: Routes = [
   {
@@ -24,7 +26,7 @@ const ROUTES: Routes = [
     component: CategoriasComponent
   },
   {
-    path: 'categoria/accesorios',
+    path: 'productos',
     component: ProductoComponent
   }
 ];
@@ -43,7 +45,7 @@ const ROUTES: Routes = [
     RouterModule.forRoot(ROUTES),
     HttpClientModule
   ],
-  providers: [ApiService],
+  providers: [ApiService, ApiServiceP],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

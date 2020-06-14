@@ -3,3 +3,4 @@ export default class Categoria{
     nombre: string
     image: string
 }
+
