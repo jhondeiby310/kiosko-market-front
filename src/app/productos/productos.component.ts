@@ -15,7 +15,10 @@ export class ProductoComponent implements OnInit {
   constructor(private apiService: ApiServiceP) { }
 
   ngOnInit() {
-    this.productos = this.apiService.obtenerProductosCategoria();
+    this.apiService.obtenerProductosCategoria().subscribe(
+      (res: any) => this.productos = res,
+      err => console.log(err)
+    )
   }
 
 }

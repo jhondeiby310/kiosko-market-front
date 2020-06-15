@@ -4,8 +4,7 @@
   color: aliceblue
 }
 
-.row{
-  display: flex;
+.card-columns{
   justify-content: space-between;
   position: relative;
   overflow: hidden;
@@ -60,6 +59,7 @@
   -o-transition: all 500ms ease-in-out;
   opacity: 0;
   transition: transfom opacity 1.5s;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 .card:hover .card-img {
