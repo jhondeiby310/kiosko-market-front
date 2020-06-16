@@ -12,14 +12,14 @@ import { environment } from 'src/environments/environment';
 export class ApiServiceP{
     
     private HOST: string;
-    private endPointProductos = '/productos';
+    private endPointProductos = '/categorias/productos';
 
     constructor(private httpClient: HttpClient){
         this.HOST = environment.hostApi;
     }
 
 
-    public obtenerProductosCategoria() {
-        return this.httpClient.get(`${this.HOST}${this.endPointProductos}`, {observe: 'body'})
+    public obtenerProductosCategoria(id: number) {
+        return this.httpClient.get(`${this.HOST}${this.endPointProductos}/${id}`, {observe: 'body'})
     }
 }

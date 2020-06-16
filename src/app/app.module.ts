@@ -10,7 +10,6 @@ import { CategoriasComponent } from './categorias/categorias.component';
 import { ApiService } from './core/services/api.service';
 import { ApiServiceP } from './core/services/api.serviceproducts';
 import { HttpClientModule } from '@angular/common/http';
-import { from } from 'rxjs';
 
 const ROUTES: Routes = [
   {
@@ -26,7 +25,7 @@ const ROUTES: Routes = [
     component: CategoriasComponent
   },
   {
-    path: 'productos',
+    path: 'productos/:id',
     component: ProductoComponent
   }
 ];
