@@ -19,7 +19,7 @@ export class CrearProductoComponent implements OnInit {
   }
 
   ngOnInit() {
-    if(this.producto.codigo) {
+    if (this.producto.codigo) {
       this.apiServiceProducto.getProducto(this.producto.codigo).subscribe((res: any) => this.producto = res[0]);
     }
   }
@@ -28,7 +28,7 @@ export class CrearProductoComponent implements OnInit {
     this.apiServiceProducto.crearProducto(this.producto).subscribe(res => this.router.navigateByUrl('/admin/productos'));
   }
 
-  actualizar(){
+  actualizar() {
     this.apiServiceProducto.actualizarProducto(this.producto).subscribe(res => this.router.navigateByUrl('/admin/productos'));
   }
 
