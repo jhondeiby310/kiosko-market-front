@@ -1,7 +1,4 @@
 <div class="p-5">
-
-  <button type="button" class="btn btn-primary btn-lg" routerLink="/producto">Crear</button>
-
   <table class="table table-dark">
     <thead>
       <tr>
@@ -17,11 +14,13 @@
         <td>{{producto.descripcion}}</td>
         <td><img src="{{producto.image}}" alt="..." style="width: 10rem;"> </td>
         <td>{{producto.precio}}</td>
+
         <td>
           <button type="button" class="btn btn-danger" (click)="eliminar(producto.codigo)">Eliminar</button>
-        </td>
+        </td> 
         <td>
-          <button type="button" class=" ml-2 btn btn-success" [routerLink]="['/producto', producto.codigo]">Editar</button>
+          <button type="button" class=" ml-2 btn btn-info"
+            [routerLink]="['/producto', producto.codigo]">Editar</button>
         </td>
       </tr>
     </tbody>

@@ -4,8 +4,9 @@ import { ApiServiceP } from '../core/services/api.serviceproducts';
 
 @Component({
   selector: 'app-admin-productos',
-  templateUrl: './admin-productos.component.html'
+  templateUrl: './admin-productos.component.html',
 })
+
 export class AdminProductosComponent implements OnInit {
   productos: Producto[];
   constructor(private apiServiceProducto: ApiServiceP) { }

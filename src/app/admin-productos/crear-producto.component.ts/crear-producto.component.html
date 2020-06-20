@@ -1,6 +1,6 @@
 <div class="container p-5">
-    <form class="bg-white p-3 border border-danger rounded">
-        <h2 class="text-danger">{{!producto.codigo ? 'Crear Producto' : 'Editar producto'}}</h2>
+    <form class="bg-white p-3 border border-info rounded">
+        <h2 class="text-info">{{!producto.codigo ? 'Crear Producto' : 'Editar producto'}}</h2>
 
         <div class="form-row">
           <div class="form-group col-md-6">
@@ -22,27 +22,19 @@
         </div>
         <div class="input-group mb-3">
           <div class="input-group-prepend">
-            <label class="input-group-text" for="inputGroupSelect01">Opciones</label>
+            <label class="input-group-text" for="inputGroupSelect01">Categoria</label>
           </div>
           <select [(ngModel)]="producto.idproductocategoria" name="idproductocategoria" class="custom-select" id="inputGroupSelect01">
             <option selected>Categorias...</option>
-            <option value=1>1-Video juegos</option>
-            <option value=2>2-Libros</option>
-            <option value=3>3-Software</option>
-            <option value=4>4-Muebles</option>
-            <option value=5>5-Electronica</option>
-            <option value=6>6-Accesorios</option>
+            <option value=1>Video juegos</option>
+            <option value=2>Libros</option>
+            <option value=3>Software</option>
+            <option value=4>Muebles</option>
+            <option value=5>Electronica</option>
+            <option value=6>Accesorios</option>
           </select>
         </div>
-        <div class="form-group">
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="gridCheck">
-            <label class="form-check-label" for="gridCheck">
-              Check me out
-            </label>
-          </div>
-        </div>
-        <button *ngIf="!producto.codigo" type="submit" class="btn btn-danger" (click)="crear()">Enviar</button>
-        <button *ngIf="producto.codigo" type="submit" class="btn btn-danger" (click)="actualizar()">Enviar</button>
+        <button *ngIf="!producto.codigo" type="submit" class="btn btn-info" (click)="crear()">Enviar</button>
+        <button *ngIf="producto.codigo" type="submit" class="btn btn-info" (click)="actualizar()">Enviar</button>
       </form>
 </div>
