@@ -2,10 +2,17 @@
     <div class="container h-100">
         <div class="row h-100 align-items-center">
             <div class="col-lg-12">
+<<<<<<< HEAD
                 <h1 class="display-4 text-dark mt-5 mb-2">KiosKo Market</h1>
                 <p class="lead mb-5 text-dark-50">Te ofrece un buen servicio para que puedas 
                     hacer tus compras de forma segura sin salir de casa .</p>
                 <img src="" classe="img-fluid" alt="imagen">
+=======
+                <h1 class="display-4 text-dark mt-5 mb-2">Categorías</h1>
+                <p class="lead mb-5 text-dark-50"> Para que compres con mas facilidad, 
+                    tenemos la categoría que buscas.
+                </p>
+>>>>>>> 60f04ee7eaba0a2aa34667280878b1f69f9aee58
             </div>
         </div>
     </div>
@@ -13,6 +20,7 @@
 
 <div class="container">
     <div class="row">
+<<<<<<< HEAD
         <div class="col-md-8 mb-5">
             <h2></h2>
             <hr>
@@ -44,13 +52,14 @@
     </div>
 
     <div class="row">
+=======
+>>>>>>> 60f04ee7eaba0a2aa34667280878b1f69f9aee58
         <div *ngFor="let categoria of categorias" class="card" style="width: 18rem;">
             <div class="card h-100">
-                <img src="{{categoria.image}}" class="card-img-top"
-                    alt="...">
+                <img src="{{categoria.image}}" class="card-img-top" alt="18rem">
                 <div class="card-body">
                     <h4 class="card-title">{{categoria.nombre}}</h4>
-                    <p class="card-text">Hola esta es una descripcion</p>
+                    <p class="card-text">{{categoria.descripcion}}</p>
                 </div>
                 <div class="card-footer">
                     <a href="#" class="btn btn-info" [routerLink]="['/productos', categoria.id]">Ver productos</a>
@@ -58,5 +67,3 @@
             </div>
         </div>
     </div>
-</div>
-
