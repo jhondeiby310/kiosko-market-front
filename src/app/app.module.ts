@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
@@ -14,6 +14,8 @@ import { ApiServiceP } from './core/services/api.serviceproducts';
 import { HttpClientModule } from '@angular/common/http';
 import { AdminProductosComponent } from './admin-productos/admin-productos.component';
 import { CrearProductoComponent } from './admin-productos/crear-producto.component.ts/crear-producto.component';
+import { AdminCategoriasComponent } from './admin-categorias/admin-categorias.component';
+import { CrearCategoriaComponent } from './admin-categorias/crear-categoria.component.ts/crear-categoria.component';
 
 const ROUTES: Routes = [
   {
@@ -37,12 +39,24 @@ const ROUTES: Routes = [
     component: AdminProductosComponent
   },
   {
+    path: 'admin/categorias',
+    component: AdminCategoriasComponent
+  },
+  {
     path: 'producto',
     component: CrearProductoComponent
   },
   {
     path: 'producto/:id',
     component: CrearProductoComponent
+  },
+  {
+    path: 'categoria',
+    component: CrearCategoriaComponent
+  },
+  {
+    path: 'categoria/:id',
+    component: CrearCategoriaComponent
   }
 ];
 
@@ -54,7 +68,9 @@ const ROUTES: Routes = [
     CategoriasComponent,
     ProductoComponent,
     AdminProductosComponent,
-    CrearProductoComponent
+    CrearProductoComponent,
+    AdminCategoriasComponent, 
+    CrearCategoriaComponent
   ],
   imports: [
     BrowserModule,
