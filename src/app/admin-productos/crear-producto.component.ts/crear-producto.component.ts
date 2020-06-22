@@ -31,5 +31,4 @@ export class CrearProductoComponent implements OnInit {
   actualizar() {
     this.apiServiceProducto.actualizarProducto(this.producto).subscribe(res => this.router.navigateByUrl('/admin/productos'));
   }
-
 }
