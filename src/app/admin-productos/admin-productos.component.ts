@@ -10,7 +10,6 @@ import { ApiServiceP } from '../core/services/api.serviceproducts';
 
 export class AdminProductosComponent implements OnInit {
   productos: Producto[];
-  usuario: Usuario;
   constructor(private apiServiceProducto: ApiServiceP) { }
 
   ngOnInit() {

@@ -24,13 +24,13 @@
     </div>
   </nav>
 
-<div class="container p-5">
-    <form class="bg-white p-3 border border-info rounded">
-        <h2 class="text-info">Iniciar Sesion</h2>
+<div class="container p-5 col-md-3">
+    <form class="bg-white p-5 border border-info rounded">
+        <h2 class="text-info" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;" style="text-align: center;">Iniciar Sesion</h2>
         <div class="form-row">
 
-            <div class="form-group col-md-6">
-                <label for="inputPassword4">Email</label>
+            <div class="form-group">
+                <label for="inputPassword4" >Email</label>
                 <input name="correo" type="email" class="form-control" id="inputPassword4">
             </div>
 
@@ -40,6 +40,6 @@
                     placeholder="Escriba su contraseña">
             </div>
         </div>
-        <button  *ngIf="!usuario.rol" type="submit" routerLink='/admin/productos' class="btn btn-info">Registrarse</button>
+        <button *ngIf="!usuario.rol" type="submit" routerLink='/admin/productos' class="btn btn-warning">Ingresar</button>
     </form>
 </div>
