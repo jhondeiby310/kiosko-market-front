@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import Producto from '../core/models/producto.model';
+import Usuario from '../core/models/usuario.model';
 import { ApiServiceP } from '../core/services/api.serviceproducts';
 
 @Component({
@@ -9,6 +10,7 @@ import { ApiServiceP } from '../core/services/api.serviceproducts';
 
 export class AdminProductosComponent implements OnInit {
   productos: Producto[];
+  usuario: Usuario;
   constructor(private apiServiceProducto: ApiServiceP) { }
 
   ngOnInit() {
