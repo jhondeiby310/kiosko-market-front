@@ -14,8 +14,10 @@ import { ApiServiceP } from './core/services/api.serviceproducts';
 import { HttpClientModule } from '@angular/common/http';
 import { AdminProductosComponent } from './admin-productos/admin-productos.component';
 import { CrearProductoComponent } from './admin-productos/crear-producto.component.ts/crear-producto.component';
-import { AdminCategoriasComponent } from './admin-categorias/admin-categorias.component';
-import { CrearCategoriaComponent } from './admin-categorias/crear-categoria.component.ts/crear-categoria.component';
+import { ApiServiceUser } from './core/services/api.serviceusers';
+import { RegistroComponent } from './registro/registro.component';
+import { LoginComponent } from './login/login.component'; 
+
 
 const ROUTES: Routes = [
   {
@@ -39,10 +41,6 @@ const ROUTES: Routes = [
     component: AdminProductosComponent
   },
   {
-    path: 'admin/categorias',
-    component: AdminCategoriasComponent
-  },
-  {
     path: 'producto',
     component: CrearProductoComponent
   },
@@ -51,12 +49,12 @@ const ROUTES: Routes = [
     component: CrearProductoComponent
   },
   {
-    path: 'categoria',
-    component: CrearCategoriaComponent
+    path: 'registro',
+    component: RegistroComponent
   },
   {
-    path: 'categoria/:id',
-    component: CrearCategoriaComponent
+    path: 'login',
+    component:LoginComponent
   }
 ];
 
@@ -69,8 +67,8 @@ const ROUTES: Routes = [
     ProductoComponent,
     AdminProductosComponent,
     CrearProductoComponent,
-    AdminCategoriasComponent, 
-    CrearCategoriaComponent
+    RegistroComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -79,7 +77,7 @@ const ROUTES: Routes = [
     FormsModule,
     CommonModule
   ],
-  providers: [ApiService, ApiServiceP],
+  providers: [ApiService, ApiServiceP, ApiServiceUser],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
