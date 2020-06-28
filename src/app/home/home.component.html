@@ -1,20 +1,86 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">{{titulo}}</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+  
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/home" routerLinkActive="active">Inicio <span
+              class="sr-only">(current)</span></a>
+        </li>
+  
+        <li class="nav-item ">
+          <a class="nav-link" routerLink="/categorias" routerLinkActive="active">Categorias</a>
+        </li>
+  
+        <li class="nav-item ">
+          <a class="nav-link" routerLink="/registro" routerLinkActive="active">Registrarse</a>
+        </li>
+  
+        <li class="nav-item ">
+          <a class="nav-link" routerLink="/login" routerLinkActive="active">Iniciar Sesion</a>
+        </li>
+  <!-- 
+        <li class="nav-item ">
+          <a class="nav-link" routerLink="/admin/productos" routerLinkActive="active">Administrar Productos</a>
+        </li>ts/2ea50fc6-928d-4d06-b3af-d7ddcd16e161.jpeg" alt="imagen"class="rounded float-right">
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+  
+        <li class="nav-item ">
+          <a class="nav-link" routerLink="/admin/categorias" routerLinkActive="active">Administrar Categorias</a>
+        </li>
+  
+        <li class="nav-item ">
+          <a class="nav-link" routerLink="/admin/usuarios" routerLinkActive="active">Administrar Usuarios</a>
+        </li>
+  
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/producto" routerLinkActive="active">Crear Productos</a>
+        </li>
+  
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/categoria" routerLinkActive="active">Crear Categorias</a>
+        </li>
+  
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/usuario" routerLinkActive="active">Crear Usuario</a>
+        </li>
+  
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Mas
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Vender</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Comprar</a>
+          </div>
+        </li> -->
+      </ul>
+      <!-- <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Buscar..." aria-label="Search">
+        <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Buscar</button>
+      </form> -->
+    </div>
+  </nav>
+  
 <header class="bg-info py-5 mb-5">
     <div class="container h-100">
         <div class="row h-100 align-items-center">
             <div class="col-lg-12">
-                <h1 class="display-4 text-dark mt-5 mb-2">KiosKo Market</h1>
-                <p class="lead mb-5 text-dark-50">A tu alcance. Aquí encontraras productos
-                    de todo tipo que te soprenderan. Compra y vende tus productos con confianza.
-                Todo lo que necesites te llega.</p>
-                <!-- <img src="./kiosko-market-front/src/app/categorias/imagen/2ea50fc6-928d-4d06-b3af-d7ddcd16e161.jpeg" alt="image" class="img-thumbnail"> -->
-                <!-- <img src="../home/image/2ea50fc6-928d-4d06-b3af-d7ddcd16e161.jpeg" alt="logo blanco" width="50px" height="50px"> -->
-                <!-- <img src="image/2ea50fc6-928d-4d06-b3af-d7ddcd16e161.jpeg" alt="texto descriptivo"> -->
-                <!-- <img src="image/2ea50fc6-928d-4d06-b3af-d7ddcd16e161.jpeg" alt="Imagen"> -->
-                <!-- <img class="card-img-top" [src]="../home/image/2ea50fc6-928d-4d06-b3af-d7ddcd16e161.jpeg" alt="Card image cap"> -->
-                <!-- <img src=”../home/image/2ea50fc6-928d-4d06-b3af-d7ddcd16e161.jpeg” fallback=”../home/image/2ea50fc6-928d-4d06-b3af-d7ddcd16e161.jpeg” /> -->
-                <!-- <img class="img-responsive" src="../home/image/2ea50fc6-928d-4d06-b3af-d7ddcd16e161.jpeg"> -->
-                <!-- <img class="logo" src="/kiosko-market-front/src/assets/2ea50fc6-928d-4d06-b3af-d7ddcd16e161.jpeg"> -->
-                <img src="../../assets/2ea50fc6-928d-4d06-b3af-d7ddcd16e161.jpeg" alt="imagen"class="rounded float-right">
+                <h1 class="display-4 text-dark mt-5 mb-2">Productos</h1>
+                <p class="lead mb-5 text-dark-50"> Para que compres con más facilidad
+                </p>
             </div>
         </div>
     </div>
@@ -22,37 +88,18 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-md-8 mb-5">
-            <h2>What We Do</h2>
-            <hr>
-            <p>KiosKo Market es una de las grandes empresas que le da un buen servicio a sus clientes
-                para que puedan comprar lo que buscan de una manera rapida y eficaz</p>
-            <p>Le ofrecemos de una buena manera un gran servicio para que busque lo que necesitas 
-                en nuestras productos,ya que tenemos las mejores categorias y productos.
-                en categorias vas a poder incontrar  Accesorios,Electronica,Libros,Muebles etc..
-                <br>Ten tus mejores compras en KiosKo Market.</p>
-            <a class="btn btn-info btn-lg" href="/categorias">sguiente &raquo;</a>
-        </div>
-        <div class="col-md-4 mb-5">
-            <h2>Contactos</h2>
-            <hr>
-            <address>
-                <strong>Datos para comunicarse con la empresa KiosKo Market</strong>
-                <br>
-                <br>Juan Felipe Londoño
-                <br>
-            </address>
-            <address>
-                <abbr title="Phone"></abbr>
-                3148641466-744287
-                <br>
-                <abbr title="Email"></abbr>
-                <a href="mailto:#">KiosKoMarket@gmail.com</a>
-            </address>
+        <div *ngFor="let producto of productos" class="card" style="width: 18rem;">
+            <div class="card h-100">
+                <img src="{{producto.image}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h4 class="card-title">{{producto.nombreproducto}}</h4>
+                    <p class="card-text">{{producto.descripcion}}</p>
+                    <p class="card-text">{{producto.precio}}</p>
+                </div>
+                <div class="card-footer">
+                    <a href="#" class="btn btn-info">Comprar</a>
+                </div>
+            </div>
         </div>
     </div>
 </div>
-
-
-
-
