@@ -72,10 +72,13 @@
     <div class="container h-100">
         <div class="row h-100 align-items-center">
             <div class="col-lg-12">
+
+
                 <h1 class="display-4 text-dark mt-5 mb-2">Categorías</h1>
                 <p class="lead mb-5 text-dark-50"> Para que compres con mas facilidad, 
                     tenemos la categoría que buscas.
                 </p>
+
             </div>
         </div>
     </div>
@@ -83,6 +86,9 @@
 
 <div class="container">
     <div class="row">
+
+
+
         <div *ngFor="let categoria of categorias" class="card" style="width: 18rem;">
             <div class="card h-100">
                 <img src="{{categoria.image}}" class="card-img-top" alt="18rem">
