@@ -1,63 +1,64 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">{{titulo}}</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-  
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/home" routerLinkActive="active">Inicio <span
-              class="sr-only">(current)</span></a>
-        </li>
-  
-        <li class="nav-item ">
-          <a class="nav-link" routerLink="/categorias" routerLinkActive="active">Categorias</a>
-        </li>
-  
-        <li class="nav-item ">
-          <a class="nav-link" routerLink="/registro" routerLinkActive="active">Registrarse</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
+  <a class="navbar-brand" href="#">{{titulo}}</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/home" routerLinkActive="active">Inicio <span
+            class="sr-only">(current)</span></a>
+      </li>
+
+      <li class="nav-item ">
+        <a class="nav-link" routerLink="/categorias" routerLinkActive="active">Categorias</a>
+      </li>
+
+      <li class="nav-item ">
+        <a class="nav-link" routerLink="/registro" routerLinkActive="active">Registrarse</a>
+      </li>
+    </ul>
+  </div>
+</nav>
 
 <div class="container p-5">
-    <form class="bg-white p-3 border border-info rounded">
-        <h2 class="text-info">Registro</h2>
-        <div class="form-row">
-            <div class="form-group col-md-6">
-                <label for="inputEmail4">Nombres</label>
-                <input name="nombre" type="text" class="form-control" id="inputEmail4" [(ngModel)]="usuario.nombre">
-            </div>
-            <div class="form-group">
-                <label for="inputAddress">Apellidos</label>
-                <input name="apellido" type="text" class="form-control" id="inputAddress"
-                    placeholder="Url de la imagen..." [(ngModel)]="usuario.apellido">
-            </div>
-            <div class="form-group col-md-6">
-                <label for="inputPassword4">Email</label>
-                <input name="correo" type="email" class="form-control" id="inputPassword4" [(ngModel)]="usuario.correo">
-            </div>
-            <div class="form-group">
-                <label for="inputAddress">Contraseña</label>
-                <input name="contrasena" type="text" class="form-control" id="inputAddress"
-                    placeholder="escriba aqui..." [(ngModel)]="usuario.contrasena">
-            </div>
+  <form class="bg-white p-3 border border-info rounded">
+    <h2 class="text-info">Registro</h2>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="inputEmail4">Nombres</label>
+        <input name="nombre" type="text" class="form-control" id="inputEmail4" [(ngModel)]="usuario.nombre">
+      </div>
+      <div class="form-group">
+        <label for="inputAddress">Apellidos</label>
+        <input name="apellido" type="text" class="form-control" id="inputAddress" placeholder="Url de la imagen..."
+          [(ngModel)]="usuario.apellido">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="inputPassword4">Email</label>
+        <input name="correo" type="email" class="form-control" id="inputPassword4" [(ngModel)]="usuario.correo">
+      </div>
+      <div class="form-group">
+        <label for="inputAddress">Contraseña</label>
+        <input name="contrasena" type="text" class="form-control" id="inputAddress" placeholder="escriba aqui..."
+          [(ngModel)]="usuario.contrasena">
+      </div>
 
-            <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <label class="input-group-text" for="inputGroupSelect01">Rol</label>
-                </div>
-                <select [(ngModel)]="usuario.rol" name="rol" class="custom-select" id="inputGroupSelect01">
-                    <option selected>Roles</option>
-                    <option value=1>Cliente</option>
-                    <option value=2>Admin</option>
-                </select>
-            </div>
-            <button type="submit" class="btn btn-info" (click)="crear()">Registrarse</button>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <label class="input-group-text" for="inputGroupSelect01">Rol</label>
         </div>
-    </form>
+        <select [(ngModel)]="usuario.rol" name="rol" class="custom-select" id="inputGroupSelect01">
+          <option selected>Roles</option>
+          <option value=1>Cliente</option>
+          <option value=2>Admin</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-info" (click)="crear()">Registrarse</button>
+      <button type="button" class=" ml-2 btn btn-info" [routerLink]="['/categorias']">Atras</button>
+    </div>
+  </form>
 </div>

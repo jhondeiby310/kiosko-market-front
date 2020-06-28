@@ -62,8 +62,8 @@
                   ¿Seguro que quiere eliminar este producto?
                 </div>
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                  <button type="submit" class="btn btn-primary" data-dismiss="modal" (click)="(eliminar(producto.codigo))">Si</button>
+                  <button type="button" class="btn btn-info" data-dismiss="modal">Cancelar</button>
+                  <button type="button" class="btn btn-danger m-10" data-dismiss="modal" (click)="(eliminar(producto.codigo))">Aceptar</button>
                 </div>
               </div>
             </div>
@@ -73,7 +73,7 @@
         <td>
           <button type="button" class=" ml-2 btn btn-info" [routerLink]="['/producto', producto.codigo]">Editar</button>
         </td>
-
+        
       </tr>
     </tbody>
   </table>

@@ -34,7 +34,9 @@
             <option value=6>Accesorios</option>
           </select>
         </div>
-        <button *ngIf="!producto.codigo" type="submit" class="btn btn-info" (click)="crear()">Enviar</button>
+        <button *ngIf="!producto.codigo" type="submit" class="btn btn-info" (click)="crear()">Enviar</button>       
         <button *ngIf="producto.codigo" type="submit" class="btn btn-info" (click)="actualizar()">Enviar</button>
+        <button *ngIf="!producto.codigo" type="submit" class="btn btn-info m-4" routerLink="/admin/productos">Atras</button>
+        <button *ngIf="producto.codigo" type="submit" class="btn btn-info m-4" routerLink="/admin/productos">Atras</button>
       </form>
 </div>
