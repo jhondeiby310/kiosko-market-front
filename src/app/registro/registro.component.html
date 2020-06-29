@@ -35,7 +35,7 @@
             <div class="form-group">
                 <label for="inputAddress">Apellidos</label>
                 <input name="apellido" type="text" class="form-control" id="inputAddress"
-                    placeholder="Url de la imagen..." [(ngModel)]="usuario.apellido">
+                    placeholder="" [(ngModel)]="usuario.apellido">
             </div>
             <div class="form-group col-md-6">
                 <label for="inputPassword4">Email</label>
@@ -44,7 +44,7 @@
             <div class="form-group">
                 <label for="inputAddress">Contraseña</label>
                 <input name="contrasena" type="text" class="form-control" id="inputAddress"
-                    placeholder="escriba aqui..." [(ngModel)]="usuario.contrasena">
+                    placeholder="*************" [(ngModel)]="usuario.contrasena">
             </div>
 
             <div class="input-group mb-3">
@@ -62,5 +62,5 @@
     </form>
 </div>
 <td>
-  <button type="button" class=" ml-2 btn btn-info" [routerLink]="['/categorias']">ATRAS</button>
+  <button type="button" class=" ml-2 btn btn-info" [routerLink]="['/categorias']">Atrás</button>
 </td>
