@@ -44,6 +44,6 @@ export class ApiServiceP {
     }
 
     public obtenerProductocompra(codigo: number) {
-        return this.httpClient.get(`${this.HOST}${this.endPointCompra}${codigo}`, {observe: 'body'});
+        return this.httpClient.get(`${this.HOST}${this.endPointCompra}/${codigo}`, {observe: 'body'});
     }
 }

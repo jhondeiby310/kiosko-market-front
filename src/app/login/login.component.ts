@@ -24,4 +24,15 @@ export class LoginComponent implements OnInit {
   crear(){
     this.apiService.crearUsuario(this.usuario).subscribe(res => this.router.navigateByUrl('/home'));
   }
+
+  login() {
+    this.apiService.login(this.usuario).subscribe(
+      (res: any) => {
+        if(res && res.correo) {
+          this.router.navigateByUrl('/admin/productos');
+        }
+      },
+      err => console.error(err)
+    )
+  }
 }

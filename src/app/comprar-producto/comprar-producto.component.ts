@@ -13,7 +13,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class ComprarProductoComponent implements OnInit {
   readonly PARAM_CODIGO_PRODUCTO = 'codigo';
   productoCodigo: number;
-  producto: Producto[];
+  producto: Producto;
 
   constructor(private apiServiceCompra: ApiServiceP, private router: Router, private activatedRoute: ActivatedRoute) {
     const params = this.activatedRoute.params.subscribe(params => {
