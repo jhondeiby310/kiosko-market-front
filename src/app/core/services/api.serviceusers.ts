@@ -13,6 +13,7 @@ export class ApiServiceUser {
 
     private HOST: string;
     private endPointUser = '/usuarios';
+    private endPointLogin = '/login';
 
     constructor(private httpClient: HttpClient) {
         this.HOST = environment.hostApi;
@@ -20,5 +21,9 @@ export class ApiServiceUser {
 
     public crearUsuario(usuario: Usuario){
         return this.httpClient.post(`${this.HOST}${this.endPointUser}`, usuario, {observe: 'body'})
+    }
+
+    public login(usuario:Usuario){
+        return this.httpClient.post(`${this.HOST}${this.endPointLogin}`, usuario, {observe: 'body'})
     }
 }

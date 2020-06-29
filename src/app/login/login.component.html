@@ -31,20 +31,19 @@
         <div class="card_login">
           <div class="card">
             <div class="card-body text-center">
-              <form #formLogin="ngForm" (ngSubmit)="onLogin(formLogin)">
+              <form>
                 <h1 class="h3 mb-3 font-weight-normal" *ngIf="!isError">INICIAR SESION</h1>
                 <div class="alert alert-danger" role="alert" *ngIf="isError">
                   Something is wrong!
                 </div>
                 <div class="form-group">
-                  <input name="correo" type="email" class="form-control" id="inputPassword4" placeholder="Correo">
+                  <input name="correo" type="email" class="form-control" id="inputPassword4" placeholder="Correo" [(ngModel)]="usuario.correo">
                 </div>
                 <div class="form-group">
                   <input name="contrasena" type="password" class="form-control" id="inputAddress"
-                    placeholder="Contraseña">
+                    placeholder="Contraseña" [(ngModel)]="usuario.contrasena">
                 </div>
-                <button *ngIf="!usuario.rol" type="submit" routerLink='/admin/productos' class="btn btn-info">Iniciar
-                  Sesión</button>
+                <button type="submit" class="btn btn-info" (click)="login()">Iniciar Sesión</button>
                 <div class="form-group">
                   <a routerLink="/user/register" class="form-control login-user" routerLink="/registro">¿No tienes Cuenta?</a>
                 </div>
