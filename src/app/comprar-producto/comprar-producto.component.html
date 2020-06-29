@@ -1,0 +1,41 @@
+<div class="container p-5">
+    <div class="bg-white p-3 border border-info rounded">
+        <div class="row row-cols-1 row-cols-md-2" *ngFor="let producto of productos">
+            <div class="col mb-4" style="width: 18rem;" >
+                <div class="card">
+                    <img src="{{producto.image}}" class="card-img-top" alt="...">
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">{{producto.nombreproducto}}</h5>
+                        <p class="card-text">{{producto.descripcion}}</p>
+                        <p class="card-text">{{producto.precio}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <form>
+            <h2 class="text-info">Comprar Producto</h2>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputEmail4">Correo</label>
+                    <input type="email" class="form-control" id="inputEmail4">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputPassword4">Numero de la tarjeta</label>
+                    <input type="password" class="form-control" id="inputPassword4">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputAddress">Contraseña</label>
+                <input type="password" class="form-control" id="inputAddress">
+            </div>
+            <div>
+                <button type="submit" class="btn btn-primary" routerLink="/home" (click)="compra()">Comprar</button>
+                <button type="submit" class="btn btn-dark m-4" routerLink="/home">Atras</button>
+            </div>
+        </form>
+    </div>
+</div>

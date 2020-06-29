@@ -1,3 +1,7 @@
+.boton{
+  text-align: center;
+}
+
 .card-footer {
   text-align: center;
   border-color: aliceblue;
@@ -23,7 +27,6 @@
   overflow: hidden;
   margin: 10px;
   border-radius: 2px;
-  display: block;
   margin-left: auto;
   margin-right: auto;
   border-color: aliceblue;
