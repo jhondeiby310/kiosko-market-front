@@ -13,6 +13,7 @@ export class ApiServiceP {
     private HOST: string;
     private endPointCategoriaProductos = '/categorias/productos';
     private endPointProductos = '/productos';
+    private endPointCompra = '/comprar';
 
     constructor(private httpClient: HttpClient) {
         this.HOST = environment.hostApi;
@@ -40,5 +41,9 @@ export class ApiServiceP {
 
     public actualizarProducto(producto: Producto) {
         return this.httpClient.put(`${this.HOST}${this.endPointProductos}`, producto, {observe: 'body'})
+    }
+
+    public obtenerProductocompra(codigo: number) {
+        return this.httpClient.get(`${this.HOST}${this.endPointCompra}${codigo}`, {observe: 'body'});
     }
 }

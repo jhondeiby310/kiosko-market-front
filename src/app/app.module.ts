@@ -16,7 +16,8 @@ import { AdminProductosComponent } from './admin-productos/admin-productos.compo
 import { CrearProductoComponent } from './admin-productos/crear-producto.component.ts/crear-producto.component';
 import { ApiServiceUser } from './core/services/api.serviceusers';
 import { RegistroComponent } from './registro/registro.component';
-import { LoginComponent } from './login/login.component'; 
+import { LoginComponent } from './login/login.component';
+import { ComprarProductoComponent } from './comprar-producto/comprar-producto.component'; 
 
 
 const ROUTES: Routes = [
@@ -54,7 +55,11 @@ const ROUTES: Routes = [
   },
   {
     path: 'login',
-    component:LoginComponent
+    component: LoginComponent
+  },
+  {
+    path: 'comprar/:codigo',
+    component: ComprarProductoComponent
   }
 ];
 
@@ -68,7 +73,8 @@ const ROUTES: Routes = [
     AdminProductosComponent,
     CrearProductoComponent,
     RegistroComponent,
-    LoginComponent
+    LoginComponent,
+    ComprarProductoComponent
   ],
   imports: [
     BrowserModule,
