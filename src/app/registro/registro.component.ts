@@ -23,6 +23,6 @@ export class RegistroComponent implements OnInit {
   }
 
   crear(){
-    this.apiService.crearUsuario(this.usuario).subscribe(res => this.router.navigateByUrl('/home'));
+    this.apiService.crearUsuario(this.usuario).subscribe(res => this.router.navigateByUrl('/login'));
   }
 }

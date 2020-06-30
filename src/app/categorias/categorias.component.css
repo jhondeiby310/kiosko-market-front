@@ -51,4 +51,11 @@
   width: 100%;
 }
 
+nav.navbar {
+  background-color:rgb(19, 25, 27);
+}
+
+.section {
+  background-color: rgb(233, 54, 54);
+}
 

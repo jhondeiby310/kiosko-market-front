@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark">
   <a class="navbar-brand" href="#">{{titulo}}</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,10 +29,10 @@
     <div class="row">
       <div class="col-xs-12 col-sm-6 col-md-4 mx-auto">
         <div class="card_login">
-          <div class="card">
+          <div class="card bg-white p-3 border border-danger rounded">
             <div class="card-body text-center">
               <form>
-                <h1 class="h3 mb-3 font-weight-normal" *ngIf="!isError">INICIAR SESION</h1>
+                <h1 class="h3 mb-3 font-weight-normal text-danger" *ngIf="!isError" >INICIAR SESION</h1>
                 <div class="alert alert-danger" role="alert" *ngIf="isError">
                   Something is wrong!
                 </div>
@@ -43,9 +43,9 @@
                   <input name="contrasena" type="password" class="form-control" id="inputAddress"
                     placeholder="Contraseña" [(ngModel)]="usuario.contrasena">
                 </div>
-                <button type="submit" class="btn btn-info" (click)="login()">Iniciar Sesión</button>
+                <button type="submit" class="btn btn-danger" (click)="login()">Iniciar Sesión</button>
                 <div class="form-group">
-                  <a routerLink="/user/register" class="form-control login-user" routerLink="/registro">¿No tienes Cuenta?</a>
+                  <a class="form-control login-user" style="color: black;" routerLink="/registro">¿No tienes Cuenta?</a>
                 </div>
               </form>
             </div>

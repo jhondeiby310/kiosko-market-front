@@ -31,6 +31,10 @@ export class LoginComponent implements OnInit {
         if(res && res.correo) {
           this.router.navigateByUrl('/admin/productos');
         }
+        else{
+          alert('Datos incorrectos, por favor cree una cuenta');
+          this.router.navigateByUrl('/registro');
+      }
       },
       err => console.error(err)
     )

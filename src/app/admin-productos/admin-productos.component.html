@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark">
   <a class="navbar-brand" href="#">{{titulo}}</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -6,13 +6,7 @@
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/home" routerLinkActive="active">Inicio <span
-            class="sr-only">(current)</span></a>
-      </li>
-
+    <ul class="navbar-nav mr-auto" >
       <li class="nav-item ">
         <a class="nav-link" routerLink="/categorias" routerLinkActive="active">Categorias</a>
       </li>
@@ -20,13 +14,17 @@
       <li class="nav-item ">
         <a class="nav-link" routerLink="/producto" routerLinkActive="active">Crear Producto</a>
       </li>
-
+    </ul>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/home" routerLinkActive="active">Salir<span class="sr-only">(current)</span></a>
+      </li>
     </ul>
   </div>
 </nav>
 
 <div class="p-5">
-  <table class="table table-dark">
+  <table class="table bg-dark table-dark">
     <thead>
       <tr>
         <th scope="col">Nombre</th>
@@ -43,17 +41,19 @@
         <td>{{producto.precio}}</td>
 
         <td>
-          <!-- <button type="submit" class="btn btn-primary" (click)="eliminar(producto.codigo)">Eliminar</button> -->
-          <button type="button" class="btn btn-danger" data-toggle="modal" [attr.data-target]="'#' + producto.nombreproducto">
+          <button type="submit" class="btn btn-danger" (click)="eliminar(producto.codigo)">Eliminar</button>
+          <!-- <button type="button" class="btn btn-danger" data-toggle="modal"
+            [attr.data-target]="'#' + producto.nombreproducto">
             Eliminar
           </button>
 
-          <div class="modal fade" [attr.id]="producto.nombreproducto" data-backdrop="static" data-keyboard="false"
+          <div class="modal fade" [attr.id]="producto.nombreproducto" tabindex="-1"
             role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div class="modal-dialog">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title" [attr.id]="'staticBackdropLabel' + producto.codigo" style="color: black;">Eliminar Producto</h5>
+                  <h5 class="modal-title" [attr.id]="'staticBackdropLabel' + producto.codigo" style="color: black;">
+                    Eliminar Producto</h5>
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
@@ -63,20 +63,19 @@
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-info" data-dismiss="modal">cancelar</button>
-                  <button type="button" class="btn btn-danger m-10" data-dismiss="modal" (click)="eliminar(producto.codigo)">Aceptar</button>
+                  <button type="button" class="btn btn-danger m-10" data-dismiss="modal"
+                    (click)="eliminar(producto.codigo)" [attr.id]="'staticBackdropLabel' + producto.codigo">Aceptar</button>
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
         </td>
 
         <td>
           <button type="button" class=" ml-2 btn btn-info" [routerLink]="['/producto', producto.codigo]">Editar</button>
         </td>
-        
+
       </tr>
     </tbody>
   </table>
 </div>
-
-
