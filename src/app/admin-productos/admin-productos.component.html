@@ -34,7 +34,7 @@
         <td>{{producto.nombreproducto}}</td>
         <td>{{producto.descripcion}}</td>
         <td><img src="{{producto.image}}" alt="..." width="150" height="150"> </td>
-        <td>{{producto.precio}}</td>
+        <td>${{producto.precio}}</td>
 
         <td>
           <button type="submit" class="btn btn-danger" (click)="eliminar(producto.codigo)">Eliminar</button>

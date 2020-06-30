@@ -28,8 +28,8 @@
     <div class="container h-100">
         <div class="row h-100 align-items-center">
             <div class="col-lg-12">
-                <h1 class="display-4 text-dark mt-5 mb-2">Productos</h1>
-                <p class="lead mb-5 text-dark-50"> Para que compres con más facilidad
+                <h1 class="display-4 text-truncate mt-5 mb-2">Productos</h1>
+                <p class="lead mb-5 text-truncate"> Para que compres con más facilidad
                 </p>
             </div>
         </div>
@@ -44,7 +44,7 @@
                 <div class="card-body">
                     <h4 class="card-title">{{producto.nombreproducto}}</h4>
                     <p class="card-text">{{producto.descripcion}}</p>
-                    <p class="card-text">{{producto.precio}}</p>
+                    <p class="card-text">${{producto.precio}}</p>
                 </div>
                 <div class="card-footer">
                     <a class="btn btn-dark" [routerLink]="['/comprar', producto.codigo]">Comprar</a>
