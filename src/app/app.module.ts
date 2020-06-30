@@ -18,6 +18,7 @@ import { ApiServiceUser } from './core/services/api-users.service';
 import { RegistroComponent } from './registro/registro.component';
 import { LoginComponent } from './login/login.component';
 import { ComprarProductoComponent } from './comprar-producto/comprar-producto.component';
+import { CompraExitosaComponent } from './compra-exitosa/compra-exitosa.component';
 
 
 const ROUTES: Routes = [
@@ -60,6 +61,10 @@ const ROUTES: Routes = [
   {
     path: 'comprar/:codigo',
     component: ComprarProductoComponent
+  },
+  {
+    path: 'compra-exitosa',
+    component: CompraExitosaComponent
   }
 ];
 
@@ -74,7 +79,8 @@ const ROUTES: Routes = [
     CrearProductoComponent,
     RegistroComponent,
     LoginComponent,
-    ComprarProductoComponent
+    ComprarProductoComponent,
+    CompraExitosaComponent
   ],
   imports: [
     BrowserModule,

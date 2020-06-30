@@ -30,6 +30,6 @@ export class ComprarProductoComponent implements OnInit {
    }
 
   compra() {
-    return alert('Compra exitosa, su producto esta en camino');
+    return this.router.navigateByUrl("/compra-exitosa");
   }
 }
