@@ -1,7 +1,7 @@
 import Producto from '../models/producto.model';
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
+import { HttpClient, HttpHeaders} from '@angular/common/http';
 
 
 
@@ -36,11 +36,14 @@ export class ApiServiceP {
     }
 
     public eliminarProducto(id: number) {
-        return this.httpClient.delete(`${this.HOST}${this.endPointProductos}/${id}`, {observe: 'body'});
+        const header = new HttpHeaders().set('Authorization', `Bearer ${localStorage.getItem('token')}`);
+        return this.httpClient.delete(`${this.HOST}${this.endPointProductos}/${id}`, {observe: 'body',
+        headers: header,
+        withCredentials: true});
     }
 
     public actualizarProducto(producto: Producto) {
-        return this.httpClient.put(`${this.HOST}${this.endPointProductos}`, producto, {observe: 'body'})
+        return this.httpClient.put(`${this.HOST}${this.endPointProductos}`, producto, {observe: 'body'});
     }
 
     public obtenerProductocompra(codigo: number) {

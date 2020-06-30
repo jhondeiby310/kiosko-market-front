@@ -23,7 +23,7 @@ import { ComprarProductoComponent } from './comprar-producto/comprar-producto.co
 const ROUTES: Routes = [
   {
     path: '',
-    component: HomeComponent
+    component: LoginComponent
   },
   {
     path: 'home',

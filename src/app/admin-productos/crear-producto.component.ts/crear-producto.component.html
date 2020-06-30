@@ -1,6 +1,6 @@
 <div class="container p-5">
-    <form class="bg-white p-3 border border-info rounded">
-        <h2 class="text-info">{{!producto.codigo ? 'Crear Producto' : 'Editar producto'}}</h2>
+    <form class="bg-white p-3 border border-danger rounded">
+        <h2 class="text-danger">{{!producto.codigo ? 'Crear Producto' : 'Editar producto'}}</h2>
 
         <div class="form-row">
           <div class="form-group col-md-6">
@@ -37,8 +37,8 @@
             <option value=6>Accesorios</option>
           </select>
         </div>
-        <button *ngIf="!producto.codigo" type="submit" class="btn btn-info" (click)="crear()">Enviar</button>       
-        <button *ngIf="producto.codigo" type="submit" class="btn btn-info" (click)="actualizar()">Enviar</button>
+        <button *ngIf="!producto.codigo" type="submit" class="btn btn-danger" (click)="crear()">Enviar</button>       
+        <button *ngIf="producto.codigo" type="submit" class="btn btn-danger" (click)="actualizar()">Enviar</button>
         <button *ngIf="!producto.codigo" type="submit" class="btn btn-dark m-4" routerLink="/admin/productos">Atras</button>
         <button *ngIf="producto.codigo" type="submit" class="btn btn-dark m-4" routerLink="/admin/productos">Atras</button>
       </form>

@@ -28,14 +28,20 @@ export class LoginComponent implements OnInit {
   login() {
     this.apiService.login(this.usuario).subscribe(
       (res: any) => {
-        if (res && res.correo) {
-          if (res.correo === 'jhon@gmail.com') {
+        console.log(res);
+        if (res && res.result.correo) {
+          if (res.result.correo === 'jhon@gmail.com') {
+            localStorage.setItem('token', res.token);
             this.router.navigateByUrl('/admin/productos');
           }
-          else {
+          else if (res.result.correo !== 'jhon@gmail.com') {
             this.router.navigateByUrl('/home');
           }
         }
+        else {
+          alert('Datos incorrectos, por favor cree una cuenta');
+          this.router.navigateByUrl('/registro');
+      }
       },
       err => console.error(err)
     );
