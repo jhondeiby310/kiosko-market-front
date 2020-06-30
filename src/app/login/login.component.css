@@ -5,3 +5,7 @@
 nav.navbar {
     background-color:rgb(19, 25, 27);
   }
+
+.title{
+    align-items: center;
+}

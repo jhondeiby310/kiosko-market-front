@@ -31,7 +31,7 @@ export class AdminProductosComponent implements OnInit {
       },
 
       (error) => {
-        alert('Por favor vuelva a iniciar sesion');
+        alert('Por favor vuelva a iniciar sesión');
         this.router.navigateByUrl('/login');
         console.log(error.status);
 
