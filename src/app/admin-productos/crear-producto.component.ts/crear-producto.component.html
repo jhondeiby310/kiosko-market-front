@@ -9,7 +9,10 @@
           </div>
           <div class="form-group col-md-6">
             <label for="inputPassword4">Precio</label>
-            <input name="precio" type="text" class="form-control" id="inputPassword4" [(ngModel)]="producto.precio">
+            <div class="input-group-prepend">
+              <div class="input-group-text">$</div>
+              <input name="precio" type="text" class="form-control" id="inputPassword4" [(ngModel)]="producto.precio">
+            </div>
           </div>
         </div>
         <div class="form-group">

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiServiceP } from 'src/app/core/services/api.serviceproducts';
+import { ApiServiceP } from 'src/app/core/services/api-products.service';
 import Producto from 'src/app/core/models/producto.model';
 import { ActivatedRoute, Router } from '@angular/router';
 

@@ -10,14 +10,14 @@ import { ProductoComponent } from './productos/productos.component'
 import { RouterModule, Routes } from '@angular/router';
 import { CategoriasComponent } from './categorias/categorias.component';
 import { ApiService } from './core/services/api.service';
-import { ApiServiceP } from './core/services/api.serviceproducts';
+import { ApiServiceP } from './core/services/api-products.service';
 import { HttpClientModule } from '@angular/common/http';
 import { AdminProductosComponent } from './admin-productos/admin-productos.component';
 import { CrearProductoComponent } from './admin-productos/crear-producto.component.ts/crear-producto.component';
-import { ApiServiceUser } from './core/services/api.serviceusers';
+import { ApiServiceUser } from './core/services/api-users.service';
 import { RegistroComponent } from './registro/registro.component';
 import { LoginComponent } from './login/login.component';
-import { ComprarProductoComponent } from './comprar-producto/comprar-producto.component'; 
+import { ComprarProductoComponent } from './comprar-producto/comprar-producto.component';
 
 
 const ROUTES: Routes = [

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiServiceUser } from '../core/services/api.serviceusers';
+import { ApiServiceUser } from '../core/services/api-users.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import Usuario from '../core/models/usuario.model';
 
@@ -21,18 +21,23 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
   }
 
-  crear(){
+  crear() {
     this.apiService.crearUsuario(this.usuario).subscribe(res => this.router.navigateByUrl('/home'));
   }
 
   login() {
     this.apiService.login(this.usuario).subscribe(
       (res: any) => {
-        if(res && res.correo) {
-          this.router.navigateByUrl('/admin/productos');
+        if (res && res.correo) {
+          if (res.correo === 'jhon@gmail.com') {
+            this.router.navigateByUrl('/admin/productos');
+          }
+          else {
+            this.router.navigateByUrl('/home');
+          }
         }
       },
       err => console.error(err)
-    )
+    );
   }
 }
